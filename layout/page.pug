@@ -1,19 +1,15 @@
-extends base
+extends partial/layout
 
-block title
-    title= __(page.title) + ' | ' + config.title
+block site_title
+    != page.title + " · " + config.title
+
+block description
+    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    meta(name="description", content=desc)
 
 block content
-    section(class='p-'+ page.title + ' p-ext p-common')
-        h1.page-title= __(page.title)
-        case page.title
-            when 'categories'
-                include categories.pug
-            when 'tags'
-                include tags.pug
-
-        .p-content
-            != page.content
-
-        if page.comments == true
-            include _partial/comments.pug
+  .autopagerize_page_element: .content: .post-page
+    include mixins
+    +make_post(page, true)
+    if page.comments
+        include partial/comments
