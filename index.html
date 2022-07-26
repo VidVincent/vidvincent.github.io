@@ -129,18 +129,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -183,6 +183,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://vidvincent.com/2022/07/26/racket-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.JPG">
+      <meta itemprop="name" content="Vid Vincent">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vid Vincent">
+      <meta itemprop="description" content="My computer science blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Vid Vincent">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/26/racket-learning/" class="post-title-link" itemprop="url">Racket Learning Notes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-26 11:10:22 / Modified: 11:24:06" itemprop="dateCreated datePublished" datetime="2022-07-26T11:10:22+08:00">2022-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Racket/" itemprop="url" rel="index"><span itemprop="name">Racket</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li>Racket是个通用、多范型，属于Lisp家族的函数式程序设计语言，它的设计目之一是为了提供一种用于创造设计与实现其它编程语言的平台，Racket被用于脚本程序设计、通用程序设计、电脑科学教育和学术研究等不同领域。</li>
+</ul>
+<hr>
+<ul>
+<li>1.1简单计算：<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span><span class="operator">+</span> <span class="number">2</span> <span class="number">4</span> <span class="number">6</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span><span class="operator">*</span> <span class="number">2</span> <span class="punctuation">(</span><span class="operator">+</span> <span class="number">3</span> <span class="number">4</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">14</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>expt <span class="number">2</span> <span class="number">3</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>quotient <span class="number">5</span> <span class="number">2</span><span class="punctuation">)</span> </span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>remainder <span class="number">5</span> <span class="number">2</span><span class="punctuation">)</span> </span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span><span class="operator">/</span> <span class="number">35</span> <span class="number">7</span><span class="punctuation">)</span> </span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span><span class="operator">/</span> <span class="number">4</span> <span class="number">6</span><span class="punctuation">)</span> </span><br><span class="line"><span class="number">2</span><span class="operator">/</span><span class="number">3</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>sqr <span class="number">3</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span><span class="built_in">sqrt</span> <span class="number">81</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>1.2定义</li>
+</ul>
+<p>使用define定义变量和函数</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>define PI <span class="number">3.1415926</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>define hello <span class="string">&quot;hello world&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>format <span class="string">&quot;~a:~a&quot;</span> hello PI<span class="punctuation">)</span></span><br><span class="line"><span class="string">&quot;hello world:3.1415926&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>define</span><br><span class="line">    <span class="punctuation">(</span>circle<span class="operator">-</span>area r<span class="punctuation">)</span> ; 函数名 参数列表</span><br><span class="line">    <span class="punctuation">(</span><span class="operator">*</span> <span class="built_in">pi</span> <span class="punctuation">(</span>sqr r<span class="punctuation">)</span><span class="punctuation">)</span>  ; 函数体<span class="punctuation">)</span></span><br><span class="line"> </span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>circle<span class="operator">-</span>area <span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="number">314.1592653589793</span></span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>1.3内置库</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">(</span>require <span class="number">2</span>htdp<span class="operator">/</span>image<span class="punctuation">)</span> ;<span class="number">2</span>htdp意为：How To Develop Program<span class="punctuation">,</span> <span class="number">2</span>nd Edition</span><br><span class="line"></span><br><span class="line"><span class="operator">&gt;</span> <span class="punctuation">(</span>define flag <span class="punctuation">(</span>rectangle <span class="number">100</span> <span class="number">61.8</span> <span class="string">&quot;solid&quot;</span> <span class="string">&quot;red&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">:</span> 参数 宽 长 实心<span class="operator">/</span>空心 颜色</span><br><span class="line"></span><br><span class="line">;相应的还有 circle<span class="punctuation">,</span> text ...</span><br><span class="line"></span><br><span class="line">;有above<span class="punctuation">,</span> beside<span class="punctuation">,</span> overlay...等操作</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
